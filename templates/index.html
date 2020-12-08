@@ -12,20 +12,23 @@
     <title>画像処理</title>
 </head>
 <body>
+
+  <p>
+    <!--html先が分かり次第書きます-->
+    <button type="button" onclick="location.href=''">アップデート</button>
+    <button type="button" onclick="location.href=''">グレースケール</button>
+    <button type="button" onclick="location.href=''">Cannyフィルタ</button>
+    <button type="button" onclick="location.href=''">顔検出（枠）</button>
+</p>
     
-    <div class="container">
-        <form　action="/upload" method="post">
-            <p>
-                <!--html先が分かり次第書きます-->
-                <button type="button" onclick="location.href=''">アップデート</button>
-                <button type="button" onclick="location.href=''">グレースケール</button>
-                <button type="button" onclick="location.href=''">Cannyフィルタ</button>
-                <button type="button" onclick="location.href=''">顔検出（枠）</button>
-            </p>
+    <div class="container mt-5">
+        <form　enctype="multipart/form-data" action="/upload" method="post">
+            
 
             <div class="form-group">
               <label for="inputFile">File input</label>
-              <input type="file" class="form-control-file" id="inputFile">
+              <input type="file" name="file" class="form-control-file" id="inputFile">
+
             </div>
           
             <hr/>
@@ -37,7 +40,7 @@
           <div class="alert alert-success" role="alert">
               {{ message }}
           </div>
-        {% endif %}
+          {% endif %}
 
     </div>
 </body>
