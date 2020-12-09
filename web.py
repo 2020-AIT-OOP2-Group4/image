@@ -8,16 +8,16 @@ app = Flask(__name__)
 UPLOAD_FOLDER = './images'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-OUTPUT_FOLDER_GRAY = './imageoutput_gray'
+OUTPUT_FOLDER_GRAY = './image/imageoutput_gray'
 app.config['OUTPUT_FOLDER_GRAY'] = OUTPUT_FOLDER_GRAY
 
-OUTPUT_FOLDER_FACE = './imageoutput_filta'
+OUTPUT_FOLDER_FACE = './image/imageoutput_filta'
 app.config['OUTPUT_FOLDER_FACE'] = OUTPUT_FOLDER_FACE
 
-OUTPUT_FOLDER_THRESHOLD = './imageoutput_threshold'
+OUTPUT_FOLDER_THRESHOLD = './image/imageoutput_threshold'
 app.config['OUTPUT_FOLDER_THRESHOLD'] = OUTPUT_FOLDER_THRESHOLD
 
-OUTPUT_FOLDER_CANNY = './imageoutput_canny'
+OUTPUT_FOLDER_CANNY = './image/imageoutput_canny'
 app.config['OUTPUT_FOLDER_CANNY'] = OUTPUT_FOLDER_CANNY
 
 
@@ -42,7 +42,7 @@ def upload():
 
 @app.route('/uploaded_list/')
 def uploaded_list():
-    files = glob.glob("./upload_images/*")
+    files = glob.glob("./images/*")
     urls = []
     for file in files:
         urls.append("/uploaded/" + os.path.basename(file))
@@ -104,5 +104,4 @@ def processed_face_file(filename):
     return send_from_directory(app.config['OUTPUT_FOLDER_FACE'], filename)
 
 if __name__ == "__main__":
-    # debugモードが不要の場合は、debug=Trueを消してください
     app.run(debug=True)
