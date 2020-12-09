@@ -13,14 +13,16 @@
 </head>
 <body>
 
-  <p>
-    <!--html先が分かり次第書きます-->
-    <button type="button" onclick="location.href='index.html'">Home</button>
-    <button type="button" onclick="location.href=''">アップデート</button>
-    <button type="button" onclick="location.href=''">グレースケール</button>
-    <button type="button" onclick="location.href=''">Cannyフィルタ</button>
-    <button type="button" onclick="location.href=''">顔検出（枠）</button>
-  </p>
+  <nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">画像処理(アップロード)</span>
+    <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/uploaded_list/">アップロードリスト</a></li>
+        <li class="nav-item"><a class="nav-link" href="/grayscale_list/">グレースケール</a></li>
+        <li class="nav-item"><a class="nav-link" href="/canny_list/">Canny</a></li>
+        <li class="nav-item"><a class="nav-link" href="/face_list/">顔検出</a></li>
+    </ul>
+  </nav>
     
     <div class="container mt-5">
         <form　enctype="multipart/form-data" action="/upload" method="post">
