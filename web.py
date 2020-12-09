@@ -8,16 +8,16 @@ app = Flask(__name__)
 UPLOAD_FOLDER = './images'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-OUTPUT_FOLDER_GRAY = './image/imageoutput_gray'
+OUTPUT_FOLDER_GRAY = './images/imageoutput_gray'
 app.config['OUTPUT_FOLDER_GRAY'] = OUTPUT_FOLDER_GRAY
 
-OUTPUT_FOLDER_FACE = './image/imageoutput_filta'
+OUTPUT_FOLDER_FACE = './images/imageoutput_filta'
 app.config['OUTPUT_FOLDER_FACE'] = OUTPUT_FOLDER_FACE
 
-OUTPUT_FOLDER_THRESHOLD = './image/imageoutput_threshold'
+OUTPUT_FOLDER_THRESHOLD = './images/imageoutput_threshold'
 app.config['OUTPUT_FOLDER_THRESHOLD'] = OUTPUT_FOLDER_THRESHOLD
 
-OUTPUT_FOLDER_CANNY = './image/imageoutput_canny'
+OUTPUT_FOLDER_CANNY = './images/imageoutput_canny'
 app.config['OUTPUT_FOLDER_CANNY'] = OUTPUT_FOLDER_CANNY
 
 
