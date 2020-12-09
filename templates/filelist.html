@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>画像一覧</title>
+    </head>
+    <body>
+        {% for item in files_file %}
+        <img src="images/{{item}}" width="250">
+        <p></p>
+        {% endfor %}
+
+        <!-- <h1>{{ files_file[0]}}</h1>
+        <h1>{{ files_file[1]}}</h1>
+        <h1>{{ files_file[2]}}</h1>
+        <h1>{{ files_file[3]}}</h1>
+        {% if files_file[3] == "uchitane_near.png"%}
+        <h1>あいうえお</h1>
+        {% endif %} -->
+    </body>
+</html>
